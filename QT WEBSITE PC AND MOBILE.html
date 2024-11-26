@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .poster {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Our Example Website</h1>
+</header>
+
+<section>
+    <h2>About Us</h2>
+    <p>We are a team of professionals dedicated to delivering high-quality services and products. Our goal is to help you succeed by providing innovative solutions tailored to your needs.</p>
+</section>
+
+<section>
+    <h2>Our Latest Video</h2>
+    <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<section>
+    <h2>Our Poster</h2>
+    <img src="https://via.placeholder.com/800x400" alt="Poster" class="poster">
+</section>
+
+<section>
+    <h2>Contact Us</h2>
+    <p>If you have any questions, feel free to reach out to us using the form below:</p>
+    <form action="mailto:youremail@example.com" method="POST" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Email Us</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 Example Website. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
