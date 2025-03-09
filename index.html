@@ -1,134 +1,129 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QT KVPD Website</title>
+    <title>My Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff; /* Light blue background */
-            color: #333;
             line-height: 1.6;
-            padding-bottom: 50px; /* Add space at the bottom for the footer */
         }
-
         header {
-            background: linear-gradient(to right, #ff7eb3, #ff758c); /* Vibrant gradient */
+            background: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #4CAF50;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
             color: white;
             text-align: center;
-            padding: 30px 20px;
-            font-size: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 14px 20px;
+            text-decoration: none;
         }
-
-        section {
+        nav a:hover {
+            background: #ddd;
+            color: black;
+        }
+        .container {
             padding: 20px;
-            margin: 20px auto;
-            background: #ffffff; /* White background for contrast */
-            border-radius: 10px;
-            max-width: 900px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
         }
-
-        section:hover {
-            transform: scale(1.02); /* Add hover effect */
+        .hero {
+            background: #f4f4f4;
+            padding: 50px 20px;
+            text-align: center;
         }
-
-        h2 {
-            color: #ff758c; /* Matching the gradient theme */
-            border-bottom: 2px solid #ff758c;
-            padding-bottom: 10px;
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5em;
         }
-
-        video, .poster {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
+        .hero p {
+            font-size: 1.2em;
+            margin: 15px 0;
         }
-
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 2px solid #ddd;
-            border-radius: 6px;
-            box-sizing: border-box;
-        }
-
-        form button {
-            background-color: #ff758c;
+        .cta-button {
+            background: #4CAF50;
             color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1rem;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
         }
-
-        form button:hover {
-            background-color: #ff7eb3; /* Slightly lighter on hover */
-        }
-
         footer {
             background: #333;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 1rem 0;
             position: fixed;
             bottom: 0;
             width: 100%;
-            font-size: 0.9rem;
+        }
+        @media (max-width: 600px) {
+            nav a {
+                float: none;
+                width: 100%;
+                text-align: left;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Welcome to QT KVPD Website</h1>
-</header>
-
-<section>
-    <h2>About Us</h2>
-    <p>Di KV Port Dickson, kami berbangga dengan pasukan juruteknik kami yang sangat berkualiti dan berpengalaman, yang komited untuk memberikan perkhidmatan terbaik. Dengan dedikasi terhadap kecemerlangan, juruteknik kami menjalani latihan intensif dan sentiasa mengikuti perkembangan terkini dalam piawaian industri bagi memastikan prestasi terbaik dalam setiap tugasan.</p>
-</section>
-
-<section>
-    <h2>Our Latest Video</h2>
-    <video controls>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</section>
-
-<section>
-    <h2>Our Poster</h2>
-    <img src="https://via.placeholder.com/800x400" alt="Poster" class="poster">
-</section>
-
-<section>
-    <h2>Contact Us</h2>
-    <p>If you have any questions, feel free to reach out to us using the form below:</p>
-    <form action="mailto:youremail@example.com" method="POST" enctype="multipart/form-data">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Email Us</button>
-    </form>
-</section>
-
-<footer>
-    <p>&copy; 2025 Qal Network Website. All rights reserved.</p>
-</footer>
-
+    <header>
+        <h1>Header / Title</h1>
+    </header>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#whatnew">What's New?</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>This is where you can add information about your organization or yourself.</p>
+            <video controls>
+                <source src="your-video-file.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section id="whatnew">
+            <h2>What's New?</h2>
+            <div class="event-poster">
+                <img src="your-event-poster.jpg" alt="Event Poster">
+                <p>Details about the new event go here.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+```
