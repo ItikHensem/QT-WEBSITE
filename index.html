@@ -19,6 +19,15 @@
             padding: 20px 0;
             text-align: center;
             font-size: 1.5em;
+            position: relative;
+        }
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
         }
         nav {
             background: #00796b;
@@ -105,13 +114,34 @@
             padding: 15px 0;
             margin-top: 20px;
         }
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                background: #00796b;
+                width: 100%;
+            }
+            nav.active {
+                display: flex;
+            }
+            nav a {
+                padding: 10px;
+                text-align: center;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <h1>Welcome To Qt Kolej Vokasional Port Dickson</h1>
     </header>
-    <nav>
+    <nav id="navbar">
         <a href="#about">Tentang Kami</a>
         <a href="#whatnew">Event Terkini</a>
         <a href="#contact">Hubungi Kami</a>
@@ -119,9 +149,10 @@
     <div class="container">
         <section id="about">
             <h2>Tentang Kami</h2>
-            <p>Di QT Kolej Vokasional Port Dickson, kami berkomitmen untuk melahirkan tenaga kerja mahir masa depan melalui pendidikan vokasional yang inovatif dan latihan praktikal. Ditubuhkan dengan visi untuk menjembatani jurang antara keperluan industri dan kesediaan tenaga kerja, institusi kami membekalkan pelajar dengan kepakaran teknikal, pemikiran kritis, serta semangat keusahawanan.</p>
-            <p>Kami berbangga dengan persekitaran pembelajaran yang dinamik, di mana pelajar mendapat pengalaman dunia sebenar dalam bidang seperti kejuruteraan, hospitaliti, teknologi maklumat, dan seni kreatif. Kemudahan terkini, kurikulum selari industri, serta kerjasama dengan syarikat terkemuka memastikan graduan kami dilengkapi untuk bersaing dalam pasaran kerja yang kompetitif.</p>
-            <p>Dibimbing oleh tenaga pengajar yang berdedikasi dan pakar industri, kami menekankan perkembangan holistik dengan membentuk bukan sahaja kemahiran teknikal, tetapi juga kepimpinan, kerja berpasukan, dan nilai etika. Sama ada melalui program apprentis, pertandingan, atau projek komuniti, pelajar kami meninggalkan QT Kolej Vokasional Port Dickson sebagai individu yang yakin, fleksibel, dan bersedia untuk menyumbang kepada industri.</p>
+            <p>Kami di QT Kolej Vokasional Port Dickson bertekad untuk melahirkan tenaga kerja berkemahiran tinggi yang selaras dengan keperluan industri moden. Berlandaskan visi untuk menjadi peneraju dalam pendidikan teknikal dan vokasional, kami menyediakan pelajar dengan kemahiran praktikal, pengetahuan teoritis, dan nilai profesional yang menyeluruh.</p>
+            <p>Dengan fasiliti terkini dan kurikulum yang dirangka berdasarkan standard industri, kolej ini menawarkan program pengajian dalam bidang kejuruteraan, teknologi maklumat, hospitaliti, dan seni kreatif. Kerjasama strategik bersama syarikat-syarikat ternama serta badan profesional memastikan pelajar terdedah kepada amalan industri semasa, sekaligus meningkatkan kebolehpasaran graduan dalam pasaran kerja global yang kompetitif.</p>
+            <p>Di bawah bimbingan tenaga pengajar yang berkaliber dan berpengalaman luas, pelajar tidak hanya dibentuk dari segi kemahiran teknikal tetapi juga dilatih untuk menguasai kompetensi insaniah seperti kepimpinan, integriti, dan daya saing. Melalui program latihan industri, projek kolaboratif, dan penyertaan aktif dalam pertandingan kebangsaan, kami memastikan setiap pelajar berkembang sebagai individu yang holistik, progresif, dan berdaya tahan.</p>
+            <p>Sebagai institusi yang komited terhadap kemajuan TVET di Malaysia, QT Kolej Vokasional Port Dickson juga aktif dalam menjana inovasi pendidikan serta sumbangan kepada komuniti setempat. Kami percaya bahawa kejayaan pelajar adalah cerminan kejayaan institusi, dan bersama-sama, kami membina legasi untuk masa depan yang lebih gemilang.</p>
             <video controls>
                 <source src="your-video-file.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -131,7 +162,7 @@
             <h2>Event Terkini</h2>
             <div class="event-poster">
                 <img src="your-event-poster.jpg" alt="Event Poster">
-                <p>Details Tentang Event</p>
+                <p><center>Details Tentang Event</center></p>
             </div>
         </section>
         <section id="contact">
@@ -151,7 +182,13 @@
         </section>
     </div>
     <footer>
-        <p>&copy; 2025 Qt Kolej Vokasional Port Dickson. Hak Cipta Terpelihara</p>
+        <p><center>&copy; 2025 Qt Kolej Vokasional Port Dickson. Hak Cipta Terpelihara</center></p>
     </footer>
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
